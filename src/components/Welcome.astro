@@ -1,0 +1,680 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroTitle from './HeroTitle.tsx';
+import LightRays from './LightRays.tsx';
+import SplitText from './SplitText.tsx';
+---
+
+<Layout>
+  <div class="min-h-screen">
+    <!-- PAGE WRAPPER -->
+    <main class="relative">
+      <!-- HERO -->
+      
+
+      <section id="hero" class="relative border-b border-slate-800/50 w-full overflow-hidden">
+        <!-- Light Rays Background -->
+        <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+          <LightRays
+            client:load
+            raysOrigin="top-center"
+            raysColor="#9723C9"
+            raysSpeed={0.8}
+            lightSpread={0.2}
+            rayLength={10.0}
+            followMouse={true}
+            mouseInfluence={0.5}
+            noiseAmount={0.1}
+            distortion={0.05}
+            fadeDistance={1.2}
+            saturation={1.5}
+          />
+        </div>
+        
+        <!-- Content Layer -->
+        <div class="relative z-10 mx-auto flex max-w-7xl flex-col gap-12 px-4 pb-24 pt-32 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:py-32">
+          
+          <!-- Left Column -->
+          <div class="max-w-2xl space-y-8 reveal-on-scroll">
+            <div class="inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-purple-400 backdrop-blur-md">
+              <span class="mr-2 h-1.5 w-1.5 animate-pulse rounded-full bg-purple-400"></span>
+              Verwonderen met digitale helderheid
+            </div>
+            
+            <HeroTitle client:visible text="Digitale impact voor de culturele sector." />
+            
+            <p class="text-lg leading-relaxed text-slate-300 sm:text-xl max-w-xl"> 
+              Met de Digitale Routekaart krijg je in vijf dagen volledige zekerheid over jullie digitalisering: 
+              wat het kost, waar je start en welke keuzes verstandig zijn – zonder technisch gedoe, zonder ruis.
+            </p>
+
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center gap-3">
+                <div class="flex h-6 w-6 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span>Transparant beeld van kosten, kansen en risico's</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="flex h-6 w-6 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span>Concreet actieplan voor de komende 3–12 maanden</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="flex h-6 w-6 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span>Specifiek voor de culturele sector en kleine teams zonder digitale expertise</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-4 pt-6">
+              <a
+                href="#cta"
+                class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-purple-600 px-8 py-3.5 text-sm font-semibold text-white shadow-[0_0_20px_-5px_rgba(151,35,201,0.4)] transition-all duration-300 hover:bg-purple-500 hover:scale-105 hover:shadow-[0_0_25px_-5px_rgba(151,35,201,0.6)]"
+              >
+                <span class="relative z-10">Plan een vrijblijvende kennismaking</span>
+                <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              </a>
+            </div>
+          </div>
+      
+          <!-- Right Column (Card) -->
+          <div class="relative mt-12 lg:mt-0 lg:w-full lg:max-w-md reveal-on-scroll delay-200">
+            <!-- Decorative blurred backdrop behind card -->
+            <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-purple-500/20 to-purple-400/20 blur-2xl opacity-50"></div>
+            
+            <div class="relative rounded-3xl border border-slate-700/50 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-xl transition-transform duration-500 hover:scale-[1.02]">
+              <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              
+              <p class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2">
+                De digitale routekaart
+              </p>
+              
+              <h3 class="text-2xl font-semibold text-slate-50 mb-4">
+               Een digitale basis die voor je werkt.
+              </h3>
+              
+              <p class="text-sm leading-relaxed text-slate-300 mb-6">
+                Binnen vijf werkdagen weet je precies waar je staat, welke stappen logisch zijn en welke je beter kunt overslaan.
+                Geen vaag advies, maar een helder plan dat bij jullie organisatie past.
+              </p>
+              
+              <dl class="space-y-4 border-t border-slate-800/60 pt-6 text-sm text-slate-300">
+                <div class="flex justify-between">
+                  <dt class="text-slate-400">Doorlooptijd</dt>
+                  <dd class="font-medium text-purple-300">5 werkdagen</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-slate-400">Voor wie</dt>
+                  <dd class="font-medium text-slate-200">Cultuurinstellingen, stichtingen</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-slate-400">Focus</dt>
+                  <dd class="font-medium text-slate-200">Structuur & heldere keuzes</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT IS DIGITALE ROUTEKAART -->
+      <section id="digitale-routekaart" class="relative border-b border-slate-800/50 bg-slate-950 py-24 lg:py-32">    
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <header class="space-y-4 text-center reveal-on-scroll">
+            <p class="text-xs font-bold uppercase tracking-widest text-purple-400">
+              Digitale Routekaart
+            </p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl">
+              Wat is de Digitale Routekaart?
+            </h2>
+          </header>
+      
+          <div class="mt-12 space-y-8 text-lg leading-relaxed text-slate-300 reveal-on-scroll delay-100">
+            <p>
+              De Digitale Routekaart is een heldere, begrijpelijke gids die precies laat zien welke digitale stappen jullie als organisatie kunnen zetten.
+              In een volgorde die past bij jullie mensen, middelen en ambities. Geen technisch verhaal, geen dikke rapporten, maar een route die rust en richting geeft.
+            </p>
+      
+            <p>
+              In de routekaart leggen we vast waar jullie vandaag staan, welke keuzes verstandig zijn, wat het kost en hoe je stap voor stap toewerkt naar een digitale werkwijze 
+              die jullie ondersteunt in plaats van belast. Het is een praktisch kompas waarmee je samen beslissingen kunt maken die écht bij jullie passen.
+            </p>
+      
+            <div class="rounded-2xl border border-slate-800/60 bg-slate-900/30 p-6 backdrop-blur-sm sm:p-8">
+                <p class="font-medium text-slate-100">
+                De Digitale Routekaart is bedoeld voor culturele instellingen, stichtingen en kleine teams die willen groeien in digitale volwassenheid — 
+                zonder overweldigd te worden. Het geeft helderheid, overzicht en vooral: vertrouwen in de volgende stap.
+                </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- TRUST / CREDIBILITY -->
+      <section id="trust" class="relative border-b border-slate-800/50 bg-slate-950 py-20">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between reveal-on-scroll">
+            <div class="lg:max-w-xs">
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">
+                Vertrouwen uit de sector
+                </p>
+                <h3 class="text-xl font-semibold text-slate-100">
+                    Partners in cultuur.
+                </h3>
+            </div>
+            <p class="max-w-2xl text-base leading-relaxed text-slate-300 border-l-2 border-purple-500/30 pl-6">
+              We werken met organisaties in de culturele sector die net als jij voor een volgende digitale stap staan. Van stichtingen tot kleine teams met grote ambities.
+            </p>
+          </div>
+          
+          <figure class="mt-12 rounded-3xl border border-slate-800/50 bg-gradient-to-br from-slate-900/80 to-slate-900/40 p-8 shadow-xl backdrop-blur-sm transition-colors hover:border-purple-500/30 reveal-on-scroll delay-200">
+            <blockquote class="text-lg leading-relaxed text-slate-200 italic">
+              "Het is heel prettig samenwerken met Glowly Bits. Marcel heeft niet alleen veel verstand van zaken, maar denkt ook pragmatisch en oplossingsgericht mee. Zijn gestructureerde aanpak en heldere communicatie zorgen voor overzicht en vertrouwen in het proces. Kortom: een fijne professional om mee te werken."
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-4">
+              <div class="h-10 w-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold">D</div>
+              <div>
+                  <div class="text-sm font-semibold text-slate-50">Simona</div>
+                  <div class="text-xs text-slate-400">Stichting Popradar</div>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="mt-12 rounded-3xl border border-slate-800/50 bg-gradient-to-br from-slate-900/80 to-slate-900/40 p-8 shadow-xl backdrop-blur-sm transition-colors hover:border-purple-500/30 reveal-on-scroll delay-200">
+            <blockquote class="text-lg leading-relaxed text-slate-200 italic">
+              "Glowly Bits heeft advies gegeven over de site en wat er aan de achterkant verbeterd kan worden om de site beter te laten functioneren. Dit heeft ertoe bijgedragen dat we beter begrijpen waarom de site zo langzaam was en dit hebben kunnen laten oplossen door de bouwer."
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-4">
+              <div class="h-10 w-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold">D</div>
+              <div>
+                  <div class="text-sm font-semibold text-slate-50">Emile</div>
+                  <div class="text-xs text-slate-400">Stichting Leerorkest Nederland</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section id="problem" class="relative border-b border-slate-800/50 bg-slate-950 py-24 lg:py-32 overflow-hidden">
+        <!-- Background accent -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-900/5 rounded-full blur-3xl -z-10"></div>
+
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-16 lg:grid-cols-2 lg:items-start">
+            <header class="space-y-6 reveal-on-scroll">
+                <p class="text-xs font-bold uppercase tracking-widest text-purple-400">
+                Herkenbaar?
+                </p>
+                <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl">
+                Je weet dat je digitaal moet groeien. Maar waar begin je?
+                </h2>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Als cultuurmaker heb je al genoeg te doen. Wat heb je nodig, en wat kost dat? Wij helpen je met kennis en kunde.
+                </p>
+            </header>
+
+            <div class="space-y-6 reveal-on-scroll delay-200">
+                <!-- Problem Items -->
+                <div class="group rounded-2xl border border-slate-800/50 bg-slate-900/40 p-6 transition-all hover:bg-slate-900/60 hover:border-slate-700">
+                    <div class="flex gap-4">
+                        <div class="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-red-500/10 text-red-400 group-hover:bg-red-500/20 transition-colors">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-100">Wat als je grip krijgt op je digitale voorkomen?</h3>
+                            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Je online strategie is los zand. Dat kan beter. Samen stippelen we je digitale doelen uit, in lijn met je wensen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl border border-slate-800/50 bg-slate-900/40 p-6 transition-all hover:bg-slate-900/60 hover:border-slate-700">
+                    <div class="flex gap-4">
+                        <div class="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-400 group-hover:bg-amber-500/20 transition-colors">
+                             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-100">Wat als je bereikt wie je wilt bereiken?</h3>
+                            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Je ziet bezoekers veranderen. Hun wensen veranderen. Daar hoort een frisse, aansprekende aanpak bij.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl border border-slate-800/50 bg-slate-900/40 p-6 transition-all hover:bg-slate-900/60 hover:border-slate-700">
+                    <div class="flex gap-4">
+                        <div class="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20 transition-colors">
+                             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-100">Wat als je werk versoepelt?</h3>
+                            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Je bent veel tijd kwijt met het onderhouden van systemen. En dat is jammer. Techniek hoort je te ondersteunen.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pt-4">
+                     <p class="text-base font-medium text-purple-400">
+                      Wij geloven dat digitalisering eenvoudiger en rustiger kan.
+                    </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT GLOWLY BITS -->
+      <section id="about-glowly-bits" class="relative border-b border-slate-800/50 bg-slate-950 py-24 lg:py-32">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div class="space-y-8">
+            <header class="space-y-4">
+              <HeroTitle client:visible text="Over Glowly Bits" />
+              <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">
+                Wie we zijn. En waarom we dit doen
+              </h2>
+            </header>
+
+            <div class="space-y-6 text-slate-300 leading-relaxed text-base reveal-on-scroll delay-100">
+              <p>
+                Glowly Bits is een kleine, onafhankelijke digitale studio die organisaties in de culturele sector helpt om eenvoudiger, slimmer en professioneler te werken.
+                We geloven dat digitalisering geen ingewikkeld verhaal hoeft te zijn. Geen dure trajecten, geen harde sales, geen technisch jargon.
+                Gewoon duidelijkheid, rust en oplossingen die echt passen bij de mensen die ermee moeten werken.
+              </p>
+
+              <p>
+                We werken graag samen met stichtingen, culturele instellingen en kleine teams die grote stappen willen zetten, maar een partner zoeken die met ze meedenkt —
+                in begrijpelijke taal en in haalbare stappen.
+              </p>
+            </div>
+
+            <div class="grid gap-8 pt-8 sm:grid-cols-2 reveal-on-scroll delay-200">
+              <div class="space-y-4 rounded-2xl bg-slate-900/30 p-6 border border-slate-800/50">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400">
+                  Waar je op kunt rekenen
+                </h3>
+                <ul class="space-y-3 text-sm text-slate-200">
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(151,35,201,0.6)]"></span>
+                    <span>Een partner die de culturele sector kent</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(151,35,201,0.6)]"></span>
+                    <span>Strategie én uitvoering onder één dak</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(151,35,201,0.6)]"></span>
+                    <span>Oplossingen die bij jouw organisatie passen</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(151,35,201,0.6)]"></span>
+                    <span>Een persoonlijke aanpak, zonder ruis</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="space-y-4 rounded-2xl bg-slate-900/30 p-6 border border-slate-800/50">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400">
+                  Wat ons drijft
+                </h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Digitalisering is voor ons niet alleen techniek, maar vooral aandacht, helderheid en samenwerken.
+                  We helpen je kiezen wat wél nodig is — en laten alles weg wat alleen maar ruis oplevert.
+                </p>
+                <p class="text-xs text-slate-500 italic pt-2">
+                  Glowly Bits werkt vanuit Rotterdam, met een grote liefde voor cultuur, creativiteit en digitale eenvoud.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY SCAN -->
+      <section id="why-scan" class="relative border-b border-slate-800/50 bg-slate-950 py-24">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <header class="space-y-4 reveal-on-scroll">
+            <p class="text-xs font-bold uppercase tracking-widest text-purple-400">
+              Wat zeg je ervan, samen vooruit?
+            </p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">
+              Eén routekaart, één plan, minder ruis.
+            </h2>
+          </header>
+          <div class="mt-8 space-y-4 text-lg leading-relaxed text-slate-300 reveal-on-scroll delay-100 max-w-2xl mx-auto">
+            <p>
+              We brengen in kaart waar het wringt, waar het goed gaat. Daarna blijven we. Met digitale kennis. Met software die voor je werkt. Daar kun je op rekenen. Zo blijf jij doen wat telt.
+            </p>
+            <p>
+              Je hoeft zelf geen digitale expert te zijn. Wij vertalen techniek naar heldere keuzes, afgestemd op jouw organisatie, middelen en tempo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DELIVERABLES -->
+      <section id="deliverables" class="relative border-b border-slate-800/50 bg-slate-950 py-24 lg:py-32">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-12 lg:grid-cols-[1.2fr,0.8fr] lg:items-start">
+            
+            <!-- List -->
+            <div class="space-y-8 reveal-on-scroll">
+              <div>
+                <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">
+                    Wat je precies ontvangt
+                </h2>
+                <p class="mt-4 text-slate-400">
+                    Alles is zo ingericht dat jij met minimale tijdsinvestering maximale duidelijkheid krijgt.
+                </p>
+              </div>
+
+            
+              <ul class="grid gap-4 sm:grid-cols-2">
+                <li class="group rounded-xl border border-slate-800/50 bg-slate-900/30 p-5 transition-all hover:border-purple-500/30 hover:bg-slate-900/50">
+                  <strong class="block font-semibold text-slate-50 mb-2 group-hover:text-purple-400 transition-colors">Intakecall (30–45 min)</strong>
+                  <p class="text-sm text-slate-400">
+                    We bespreken jullie doelen, uitdagingen en verwachtingen. Dit is de basis.
+                  </p>
+                </li>
+                <li class="group rounded-xl border border-slate-800/50 bg-slate-900/30 p-5 transition-all hover:border-purple-500/30 hover:bg-slate-900/50">
+                  <strong class="block font-semibold text-slate-50 mb-2 group-hover:text-purple-400 transition-colors">Systeemanalyse</strong>
+                  <p class="text-sm text-slate-400">
+                    We brengen jullie website, tools, koppelingen en infrastructuur in kaart.
+                  </p>
+                </li>
+                <li class="group rounded-xl border border-slate-800/50 bg-slate-900/30 p-5 transition-all hover:border-purple-500/30 hover:bg-slate-900/50">
+                  <strong class="block font-semibold text-slate-50 mb-2 group-hover:text-purple-400 transition-colors">Proces- &amp; workflowanalyse</strong>
+                  <p class="text-sm text-slate-400">
+                    Praktische kant: waar gaat tijd verloren, waar ontstaan fouten?
+                  </p>
+                </li>
+                <li class="group rounded-xl border border-slate-800/50 bg-slate-900/30 p-5 transition-all hover:border-purple-500/30 hover:bg-slate-900/50">
+                  <strong class="block font-semibold text-slate-50 mb-2 group-hover:text-purple-400 transition-colors">Kostenraming</strong>
+                  <p class="text-sm text-slate-400">
+                    Realistische inschatting in drie smaken: minimaal, aanbevolen en ideaal.
+                  </p>
+                </li>
+                <li class="group rounded-xl border border-slate-800/50 bg-slate-900/30 p-5 transition-all hover:border-purple-500/30 hover:bg-slate-900/50">
+                  <strong class="block font-semibold text-slate-50 mb-2 group-hover:text-purple-400 transition-colors">Prioriteitenmatrix</strong>
+                  <p class="text-sm text-slate-400">
+                    Wat is nú belangrijk en wat kan wachten?
+                  </p>
+                </li>
+                <li class="group rounded-xl border border-slate-800/50 bg-slate-900/30 p-5 transition-all hover:border-purple-500/30 hover:bg-slate-900/50">
+                  <strong class="block font-semibold text-slate-50 mb-2 group-hover:text-purple-400 transition-colors">Actieplan 3–12 maanden</strong>
+                  <p class="text-sm text-slate-400">
+                    Concrete roadmap met stappen en volgorde. Direct aan de slag.
+                  </p>
+                </li>
+                <li class="group rounded-xl border border-slate-800/50 bg-slate-900/30 p-5 transition-all hover:border-purple-500/30 hover:bg-slate-900/50 sm:col-span-2">
+                  <strong class="block font-semibold text-slate-50 mb-2 group-hover:text-purple-400 transition-colors">Presentatiecall (60 min)</strong>
+                  <p class="text-sm text-slate-400">
+                    We lopen samen door het rapport heen, beantwoorden vragen en bespreken vervolgstappen.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Sidebar Benefit -->
+            <aside class="sticky top-8 space-y-6 rounded-3xl border border-slate-800/60 bg-slate-900/40 p-8 backdrop-blur-xl reveal-on-scroll delay-200">
+              <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400">
+                Wat het je oplevert
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                   <div class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+                     <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                   </div>
+                  <span class="text-sm text-slate-200">Direct inzicht in je digitale situatie</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+                     <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                   </div>
+                  <span class="text-sm text-slate-200">Realistische vervolgstappen</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+                     <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                   </div>
+                  <span class="text-sm text-slate-200">Kleine, haalbare verbeteringen</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/20 text-purple-400">
+                     <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                   </div>
+                  <span class="text-sm text-slate-200">Geen IT-gedoe: wél controle en grip</span>
+                </li>
+              </ul>
+              
+              <div class="pt-4">
+                  <a href="#cta" class="block w-full rounded-xl bg-slate-800 py-3 text-center text-sm font-semibold text-slate-50 transition hover:bg-slate-700">
+                      Direct aanvragen
+                  </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASE STUDY -->
+      <section id="case" class="relative border-b border-slate-800/50 bg-slate-950 py-24">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <header class="space-y-4 reveal-on-scroll">
+            <p class="text-xs font-bold uppercase tracking-widest text-purple-400">
+              Uit de praktijk
+            </p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">
+              Een voorbeeld uit de sector
+            </h2>
+          </header>
+          <div class="mt-8 rounded-3xl border border-slate-800/60 bg-gradient-to-b from-slate-900/50 to-slate-950 p-8 reveal-on-scroll delay-100">
+             <div class="text-sm leading-relaxed text-slate-300 space-y-4">
+                <p>
+                Voor een stichting in de popsector ontwikkelden we een nieuwe website én een geautomatiseerd boekingsproces voor oefenruimtes. 
+                We begonnen niet met bouwen, maar met precies dit: in kaart brengen wat er nodig was, waar knelpunten zaten en wat haalbaar was.
+                </p>
+                
+                <div class="grid gap-4 sm:grid-cols-3 pt-4">
+                    <div class="rounded-xl bg-slate-900/50 p-4 border border-slate-800">
+                        <div class="text-purple-400 font-bold text-lg mb-1">Minder fouten</div>
+                        <div class="text-xs text-slate-400">Aanzienlijk minder administratieve last</div>
+                    </div>
+                    <div class="rounded-xl bg-slate-900/50 p-4 border border-slate-800">
+                        <div class="text-purple-400 font-bold text-lg mb-1">Sneller</div>
+                        <div class="text-xs text-slate-400">Duidelijke online boeking voor muzikanten</div>
+                    </div>
+                     <div class="rounded-xl bg-slate-900/50 p-4 border border-slate-800">
+                        <div class="text-purple-400 font-bold text-lg mb-1">Professioneel</div>
+                        <div class="text-xs text-slate-400">Organisatie oogt digitaal volwassen</div>
+                    </div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="relative border-b border-slate-800/50 bg-slate-950 py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <header class="space-y-4 text-center max-w-2xl mx-auto reveal-on-scroll">
+            <p class="text-xs font-bold uppercase tracking-widest text-purple-400">
+              Transparant geprijsd
+            </p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">
+              Eerlijke prijzen, zonder verrassingen
+            </h2>
+            <p class="text-sm text-slate-400">
+              We houden het graag eenvoudig. Geen verborgen kosten, geen onnodige modules.
+              Tijdens de kennismaking bepalen we samen welk pakket past.
+            </p>
+          </header>
+
+          <div class="mt-16 grid gap-8 md:grid-cols-3 reveal-on-scroll delay-100 items-stretch">
+            
+            <!-- Card 1 -->
+            <div class="group relative flex flex-col rounded-3xl border border-slate-800/60 bg-slate-900/40 p-8 backdrop-blur-sm transition-all duration-300 hover:border-slate-600 hover:bg-slate-900/60 hover:-translate-y-2">
+              <h3 class="text-lg font-semibold text-slate-50">Kleine organisatie</h3>
+              <p class="mt-1 text-xs font-medium text-slate-400 uppercase tracking-wider">1–5 medewerkers</p>
+              <div class="mt-6">
+                  <span class="text-4xl font-bold text-slate-50">€750</span>
+              </div>
+              <p class="mt-6 text-sm text-slate-300 leading-relaxed flex-grow">
+                Geschikt voor stichtingen en kleine teams met een beperkt maar helder werkgebied.
+              </p>
+               <div class="mt-8 pt-8 border-t border-slate-800">
+                   <a href="#cta" class="block w-full rounded-full border border-slate-600 py-2.5 text-center text-sm font-semibold text-slate-300 transition hover:bg-slate-800 hover:text-white">Kies Start</a>
+               </div>
+            </div>
+
+            <!-- Card 2 (Featured) -->
+            <div class="group relative flex flex-col rounded-3xl border border-purple-500/50 bg-slate-900/60 p-8 shadow-2xl shadow-purple-900/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 z-10">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600 px-3 py-1 text-xs font-bold uppercase text-slate-950 shadow-lg shadow-purple-500/40">
+                  Meest gekozen
+              </div>
+              <h3 class="text-lg font-semibold text-slate-50">Middelgroot</h3>
+              <p class="mt-1 text-xs font-medium text-purple-400 uppercase tracking-wider">5–20 medewerkers</p>
+               <div class="mt-6">
+                  <span class="text-4xl font-bold text-purple-400">€1.250</span>
+              </div>
+              <p class="mt-6 text-sm text-slate-300 leading-relaxed flex-grow">
+                Voor organisaties met meerdere programma’s, afdelingen of locaties. Vaak de beste fit.
+              </p>
+              <div class="mt-8 pt-8 border-t border-slate-700">
+                   <a href="#cta" class="block w-full rounded-full bg-purple-600 py-2.5 text-center text-sm font-semibold text-slate-950 shadow-lg shadow-purple-500/20 transition hover:bg-purple-400">Kies Groei</a>
+               </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group relative flex flex-col rounded-3xl border border-slate-800/60 bg-slate-900/40 p-8 backdrop-blur-sm transition-all duration-300 hover:border-slate-600 hover:bg-slate-900/60 hover:-translate-y-2">
+              <h3 class="text-lg font-semibold text-slate-50">Grote instelling</h3>
+              <p class="mt-1 text-xs font-medium text-slate-400 uppercase tracking-wider">Complex landschap</p>
+              <div class="mt-6">
+                  <span class="text-4xl font-bold text-slate-50">€2.500</span>
+              </div>
+              <p class="mt-6 text-sm text-slate-300 leading-relaxed flex-grow">
+                Voor organisaties met veel verschillende systemen, stakeholders of complexe processen.
+              </p>
+               <div class="mt-8 pt-8 border-t border-slate-800">
+                   <a href="#cta" class="block w-full rounded-full border border-slate-600 py-2.5 text-center text-sm font-semibold text-slate-300 transition hover:bg-slate-800 hover:text-white">Kies Complex</a>
+               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section id="process" class="relative border-b border-slate-800/50 bg-slate-950 py-24 lg:py-32">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <header class="space-y-4 text-center reveal-on-scroll">
+            <p class="text-xs font-bold uppercase tracking-widest text-purple-400">
+              Werkwijze
+            </p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-4xl">
+              Zo werkt het, stap voor stap
+            </h2>
+          </header>
+          
+          <div class="mt-16 relative reveal-on-scroll delay-100">
+            <!-- Vertical line connecting steps -->
+            <div class="absolute left-8 top-4 bottom-12 w-0.5 bg-gradient-to-b from-purple-500/50 to-slate-800 hidden sm:block"></div>
+
+            <div class="space-y-12">
+                <div class="relative flex gap-8 sm:items-start">
+                    <div class="hidden sm:flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-slate-950 bg-slate-900 text-purple-400 font-bold text-xl shadow-xl z-10">1</div>
+                    <div class="flex-1 rounded-2xl border border-slate-800/50 bg-slate-900/30 p-6 backdrop-blur-sm hover:border-purple-500/30 transition-colors">
+                        <div class="flex items-center gap-3 mb-3 sm:hidden">
+                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 text-sm font-bold text-purple-400">1</span>
+                             <h3 class="font-semibold text-slate-50">Kennismaking &amp; intake</h3>
+                        </div>
+                        <h3 class="hidden sm:block text-lg font-semibold text-slate-50 mb-2">Kennismaking &amp; intake (dag 1)</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            In 20–45 minuten verkennen we jullie situatie, doelen en verwachtingen. Op basis hiervan bepalen we of de scan past en wat de focus wordt.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex gap-8 sm:items-start">
+                    <div class="hidden sm:flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-slate-950 bg-slate-900 text-purple-400 font-bold text-xl shadow-xl z-10">2</div>
+                    <div class="flex-1 rounded-2xl border border-slate-800/50 bg-slate-900/30 p-6 backdrop-blur-sm hover:border-purple-500/30 transition-colors">
+                        <div class="flex items-center gap-3 mb-3 sm:hidden">
+                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 text-sm font-bold text-purple-400">2</span>
+                             <h3 class="font-semibold text-slate-50">Analyse</h3>
+                        </div>
+                        <h3 class="hidden sm:block text-lg font-semibold text-slate-50 mb-2">Analyse van systemen &amp; processen (dag 2–3)</h3>
+                         <p class="text-sm text-slate-300 leading-relaxed">
+                            We duiken in je digitale landschap en workflows. Waar gaat tijd verloren? Waar ontstaan fouten? Welke systemen sluiten niet goed op elkaar aan?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex gap-8 sm:items-start">
+                    <div class="hidden sm:flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-slate-950 bg-slate-900 text-purple-400 font-bold text-xl shadow-xl z-10">3</div>
+                    <div class="flex-1 rounded-2xl border border-slate-800/50 bg-slate-900/30 p-6 backdrop-blur-sm hover:border-purple-500/30 transition-colors">
+                        <div class="flex items-center gap-3 mb-3 sm:hidden">
+                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 text-sm font-bold text-purple-400">3</span>
+                             <h3 class="font-semibold text-slate-50">Actieplan</h3>
+                        </div>
+                        <h3 class="hidden sm:block text-lg font-semibold text-slate-50 mb-2">Actieplan, kostenraming &amp; prioriteiten (dag 4)</h3>
+                         <p class="text-sm text-slate-300 leading-relaxed">
+                            We vertalen de analyse naar een concreet plan met scenario’s, kosten, prioriteiten en een tijdspad van 3–12 maanden.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex gap-8 sm:items-start">
+                     <div class="hidden sm:flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-slate-950 bg-purple-600 text-slate-950 font-bold text-xl shadow-xl z-10">4</div>
+                    <div class="flex-1 rounded-2xl border border-purple-500/30 bg-slate-900/50 p-6 backdrop-blur-sm hover:border-purple-500/50 transition-colors shadow-[0_0_30px_-10px_rgba(151,35,201,0.1)]">
+                        <div class="flex items-center gap-3 mb-3 sm:hidden">
+                             <span class="flex h-8 w-8 items-center justify-center rounded-full bg-purple-600 text-sm font-bold text-slate-950">4</span>
+                             <h3 class="font-semibold text-slate-50">Oplevering</h3>
+                        </div>
+                        <h3 class="hidden sm:block text-lg font-semibold text-slate-50 mb-2">Oplevering &amp; vervolgstap (dag 5)</h3>
+                         <p class="text-sm text-slate-300 leading-relaxed">
+                             We presenteren het rapport, beantwoorden vragen en bespreken welke stappen jullie zelf kunnen zetten — en waar wij eventueel bij kunnen helpen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section id="cta" class="relative bg-slate-950 py-24">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div class="relative overflow-hidden rounded-[2.5rem] border border-purple-500/30 bg-gradient-to-b from-slate-900 to-slate-950 p-12 text-center shadow-[0_0_80px_-20px_rgba(151,35,201,0.3)] reveal-on-scroll">
+            
+            <!-- Glow effect inside CTA -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-purple-500/20 blur-[80px] -z-10 rounded-full pointer-events-none"></div>
+
+            <h2 class="text-3xl font-bold tracking-tight text-slate-50 sm:text-5xl">
+              Klaar voor een digitale stap die écht werkt?
+            </h2>
+            <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+              Plan een korte, vrijblijvende kennismaking van 20 minuten. Je ontdekt meteen of de Digitaliseringsscan &amp; Actieplan past bij jullie organisatie
+              en wat je op korte termijn al kunt doen.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+              <a
+                href="mailto:hallo@glowlybits.nl"
+                class="inline-flex items-center justify-center rounded-full bg-purple-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-purple-500/25 transition-all hover:bg-purple-500 hover:scale-105 hover:shadow-purple-500/40"
+              >
+                Plan een kennismaking
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center justify-center rounded-full border border-slate-700 px-8 py-4 text-base font-semibold text-slate-100 transition-all hover:border-slate-500 hover:bg-slate-800"
+              >
+                Vraag het voorbeeldrapport aan
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>
