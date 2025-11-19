@@ -1,0 +1,69 @@
+---
+import Navbar from '../components/Navbar.astro';
+---
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Glowly Bits - Digitale impact voor de culturele sector.</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+	</head>
+	<body class="bg-slate-950 text-slate-50 antialiased font-sans overflow-x-hidden relative selection:bg-purple-500/30 selection:text-purple-200">
+		<!-- Noise Overlay -->
+		<div class="bg-noise"></div>
+		
+		<!-- Ambient Background Glows -->
+		<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+			<div class="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-purple-500/10 blur-[100px] animate-blob"></div>
+			<div class="absolute top-[20%] right-[-10%] w-[35vw] h-[35vw] rounded-full bg-purple-600/10 blur-[100px] animate-blob animation-delay-2000"></div>
+			<div class="absolute bottom-[-10%] left-[20%] w-[50vw] h-[50vw] rounded-full bg-purple-900/10 blur-[120px] animate-blob animation-delay-4000"></div>
+		</div>
+
+		<Navbar />
+		<slot />
+		
+		<!-- Scroll Reveal Script -->
+		<script>
+			const observerOptions = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.1
+			};
+
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible');
+						observer.unobserve(entry.target); // Only animate once
+					}
+				});
+			}, observerOptions);
+
+			document.querySelectorAll('.reveal-on-scroll').forEach((element) => {
+				observer.observe(element);
+			});
+		</script>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+    
+    /* Custom Utility for animation delay if not using a plugin */
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+</style>
